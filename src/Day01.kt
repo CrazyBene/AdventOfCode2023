@@ -10,8 +10,7 @@ fun main() {
     fun part2(input: List<String>): Int {
         return input.sumOf { line ->
             getCalibrationValue(
-                line
-                    .replace("one", "one1one")
+                line.replace("one", "one1one")
                     .replace("two", "two2two")
                     .replace("three", "three3three")
                     .replace("four", "four4four")
@@ -28,9 +27,12 @@ fun main() {
     val testInputPart2 = readInput("Day01Part2Test")
     val input = readInput("Day01")
 
+    println("Advent of Code 2023 - Day 1")
+    println("---------------------------")
+
     check(part1(testInputPart1) == 142)
-    part1(input).println()
+    println("Solution for part1: ${part1(input)}")
 
     check(part2(testInputPart2) == 281)
-    part2(input).println()
+    println("Solution for part2: ${part2(input)}")
 }
