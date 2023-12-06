@@ -1,3 +1,9 @@
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
+import kotlinx.coroutines.awaitAll
+import kotlinx.coroutines.runBlocking
+import kotlin.math.min
+
 fun main() {
     data class SourceToDestinationRange(val destinationStartRange: Long, val sourceStartRange: Long, val range: Long)
 
@@ -51,34 +57,36 @@ fun main() {
         val temperatureToHumidityMap = parseInputToMap(input, "temperature-to-humidity map:")
         val humidityToLocationMap = parseInputToMap(input, "humidity-to-location map:")
 
-        var smallestLocation = Long.MAX_VALUE;
 
-        input[0].split(":")[1].trim().split("\\s+".toRegex()).map { it.toLong() }.windowed(2, 2)
-            .forEach { (start, range) ->
-                var currentSeed = start
-                while (currentSeed < start + range) {
-                    val location =
-                        humidityToLocationMap.passItemThrough(
-                            temperatureToHumidityMap.passItemThrough(
-                                lightToTemperatureMap.passItemThrough(
-                                    waterToLightMap.passItemThrough(
-                                        fertilizerToWaterMap.passItemThrough(
-                                            soilToFertilizerMap.passItemThrough(
-                                                seedToSoilMap.passItemThrough(currentSeed)
+        val seedRanges = input[0].split(":")[1].trim().split("\\s+".toRegex()).map { it.toLong() }.windowed(2, 2)
+
+        return runBlocking(Dispatchers.Default) {
+            val smallestLocations = seedRanges.map { (start, range) ->
+                async {
+                    var smallestLocation = Long.MAX_VALUE
+                    for (seed in start until start + range) {
+                        val location =
+                            humidityToLocationMap.passItemThrough(
+                                temperatureToHumidityMap.passItemThrough(
+                                    lightToTemperatureMap.passItemThrough(
+                                        waterToLightMap.passItemThrough(
+                                            fertilizerToWaterMap.passItemThrough(
+                                                soilToFertilizerMap.passItemThrough(
+                                                    seedToSoilMap.passItemThrough(seed)
+                                                )
                                             )
                                         )
                                     )
                                 )
                             )
-                        )
 
-                    if (location < smallestLocation)
-                        smallestLocation = location
-
-                    currentSeed++
+                        smallestLocation = min(location, smallestLocation)
+                    }
+                    smallestLocation
                 }
-            }
-        return smallestLocation
+            }.awaitAll()
+            smallestLocations.min()
+        }
     }
 
     val testInput = readInput("Day05Test")
