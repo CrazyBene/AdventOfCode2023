@@ -29,8 +29,7 @@ fun main() {
         val valueHistories = parseInput(input)
 
         return valueHistories.sumOf { valueHistory ->
-            calculateValuePyramid(valueHistory).mapIndexed { index, list -> if (index % 2 == 0) list.first() else -list.first() }
-                .sum()
+            calculateValuePyramid(valueHistory.reversed()).sumOf { it.last() }
         }
     }
 
