@@ -1,61 +1,64 @@
-import kotlin.math.pow
+// I could not solve part 2 of the puzzle on my own
+// I looked at the solution in this video https://www.youtube.com/watch?v=g3Ms5e7Jdqo
+// and adapted it to kotlin
+
+import kotlin.math.min
 
 fun main() {
-    fun countGroups(line: List<Char>): List<Int> {
-        return line.joinToString(separator = "").split("""\.+""".toRegex()).map { it.count() }.filter { it != 0 }
+    val cache = mutableMapOf<Pair<String, List<Int>>, Long>()
+
+    fun count(cfg: String, nums: List<Int>): Long {
+        if (cfg.isEmpty())
+            return if (nums.isEmpty()) 1 else 0
+
+        if (nums.isEmpty())
+            return if ('#' in cfg) 0 else 1
+
+        val key = cfg to nums
+
+        if(key in cache)
+            return cache.getValue(key)
+
+        var result = 0L
+
+        if (cfg[0] in ".?")
+            result += count(cfg.substring(1), nums)
+
+        if (cfg[0] in "#?")
+            if (nums[0] <= cfg.count() && '.' !in cfg.substring(
+                    0,
+                    nums[0]
+                ) && (nums[0] == cfg.count() || cfg[nums[0]] != '#')
+            ) {
+                result += count(cfg.substring(min(cfg.count(), nums[0] + 1)), nums.subList(1, nums.size))
+            }
+
+        cache[key] = result
+        return result
     }
 
-    fun part1(input: List<String>): Int {
-        val lines = input.map {
-            val split = it.split(" ")
-            split[0] to split[1].split(",").map { it.toInt() }
-        }
-
-        val possibilityList = lines.map { (map, realCount) ->
-            var possibilities = 0
-            val numberOfUnknown = map.count { it == '?' }
-            val tries = 2.0.pow(numberOfUnknown).toInt()
-            for (i in 0 until tries) {
-                val currentUnknownTry =
-                    i.toString(2).padStart(numberOfUnknown, '0').map { if (it == '1') '#' else '.' }.toMutableList()
-                val currentTry = map.map { if (it == '?') currentUnknownTry.removeFirst() else it }
-                if (realCount == countGroups(currentTry))
-                    possibilities++
+    fun part1(input: List<String>): Long {
+        val lines = input.flatMap { line ->
+            line.split(" ").zipWithNext().map { (cfg, nums) ->
+                cfg to nums.split(",").map { it.toInt() }
             }
-            possibilities
         }
 
-        return possibilityList.sum()
+        return lines.sumOf {
+            count(it.first, it.second)
+        }
     }
 
     fun part2(input: List<String>): Long {
-        val l = input.map {
-            val unknown = it.count { it == '?' } * 5 + 4
-            2.0.pow(unknown).toBigDecimal()
+        val lines = input.flatMap { line ->
+            line.split(" ").zipWithNext().map { (cfg, nums) ->
+                List(5) { cfg }.joinToString("?") to List(5) { nums.split(",").map { it.toInt() } }.flatten()
+            }
         }
 
-        println(l.sumOf { it })
-
-
-//        val lines = input.map {
-//            val split = it.split(" ")
-//            split[0] to split[1].split(",").map { it.toInt() }
-//        }
-//
-//        val possibilityList = lines.map { (map, realCount) ->
-//            var possibilities = 0
-//            val numberOfUnknown = map.count { it == '?'}
-//            val tries = 2.0.pow(numberOfUnknown).toInt()
-//            for(i in 0 until tries) {
-//                val currentUnknownTry = i.toString(2).padStart(numberOfUnknown, '0').map { if(it == '1') '#' else '.' }.toMutableList()
-//                val currentTry = map.map { if(it == '?') currentUnknownTry.removeFirst() else it }
-//                if(realCount == countGroups(currentTry))
-//                    possibilities++
-//            }
-//            possibilities
-//        }
-
-        return input.size.toLong()
+        return lines.sumOf {
+            count(it.first, it.second)
+        }
     }
 
     val testInput = readInput("Day12Test")
@@ -64,7 +67,7 @@ fun main() {
     println("Advent of Code 2023 - Day 12")
     println("----------------------------")
 
-    check(part1(testInput) == 21)
+    check(part1(testInput) == 21L)
     println("Solution for part1: ${part1(input)}")
 
     check(part2(testInput) == 525152L)
