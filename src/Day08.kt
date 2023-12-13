@@ -70,8 +70,8 @@ fun main() {
     val testInputPart2 = readInput("Day08Part2Test")
     val input = readInput("Day08")
 
-    println("Advent of Code 2023 - Day 8")
-    println("---------------------------")
+    println("Advent of Code 2023 - Day 08")
+    println("----------------------------")
 
     check(part1(testInputPart1) == 6)
     println("Solution for part1: ${part1(input)}")
