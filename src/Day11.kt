@@ -1,15 +1,5 @@
 import kotlin.math.abs
 
-inline fun <reified T> List<List<T>>.transpose(): List<List<T>> {
-    val cols = this[0].size
-    val rows = this.size
-    return List(cols) { j ->
-        List(rows) { i ->
-            this[i][j]
-        }
-    }
-}
-
 fun List<List<Char>>.findAllChars(char: Char): List<Pair<Int, Int>> {
     return this.flatMapIndexed { y, line ->
         line.mapIndexed { x, c ->
