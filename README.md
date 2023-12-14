@@ -1,7 +1,7 @@
 # Advent Of Code 2023
 
-![Days completed](https://img.shields.io/badge/Days%20Completed-13-green)
-![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-26-yellow)
+![Days completed](https://img.shields.io/badge/Days%20Completed-14-green)
+![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-28-yellow)
 ![Stars obtained](https://img.shields.io/badge/Help%20Needed%20➕-1-purple)
 ![Stars obtained](https://img.shields.io/badge/Not%20Solved%20❌-0-red)
 
@@ -24,6 +24,7 @@ These are my solution to the Advent of Code[^aoc] puzzles of 2023.
 | 11  | [Cosmic Expansion][day11]                |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/Day11.kt) |
 | 12  | [Hot Springs][day12]                     |   ⭐    |   ➕    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/Day12.kt) |
 | 13  | [Point of Incidence][day13]              |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/Day13.kt) |
+| 14  | [Parabolic Reflector Dish][day14]        |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/Day14.kt) |
 
 ## Templates
 
@@ -61,3 +62,4 @@ This readme uses the [readme][aoc-readme-template] of pgebert as template.
 [day11]: https://adventofcode.com/2023/day/11
 [day12]: https://adventofcode.com/2023/day/12
 [day13]: https://adventofcode.com/2023/day/13
+[day14]: https://adventofcode.com/2023/day/14
