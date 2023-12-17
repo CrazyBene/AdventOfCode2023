@@ -3,17 +3,20 @@ package day16
 import readInput
 import kotlin.math.max
 
+typealias Position = Pair<Int, Int>
+typealias Direction = Pair<Int, Int>
+
 fun main() {
     operator fun Pair<Int, Int>.plus(other: Pair<Int, Int>): Pair<Int, Int> {
         return this.first + other.first to this.second + other.second
     }
 
-    val up = 0 to -1
-    val down = 0 to 1
-    val left = -1 to 0
-    val right = 1 to 0
+    val up: Direction = 0 to -1
+    val down: Direction = 0 to 1
+    val left: Direction = -1 to 0
+    val right: Direction = 1 to 0
 
-    fun nextDirections(currentTile: Char, lastDirection: Pair<Int, Int>): List<Pair<Int, Int>> {
+    fun nextDirections(currentTile: Char, lastDirection: Direction): List<Direction> {
         if (currentTile == '.') return listOf(lastDirection)
 
         return when (currentTile to lastDirection) {
@@ -36,20 +39,20 @@ fun main() {
         }
     }
 
-    fun List<List<Char>>.traverseGrid(
-        startPosition: Pair<Int, Int>,
-        startDirection: Pair<Int, Int>
-    ): Set<Pair<Pair<Int, Int>, Pair<Int, Int>>> {
+    fun List<List<Char>>.traverseBeam(
+        startPosition: Position,
+        startDirection: Direction
+    ): Set<Pair<Position, Direction>> {
         val xRange = 0..<this.first().size
         val yRange = this.indices
 
         var currentSteps = mutableListOf(startPosition to startDirection)
-        val stepsSeen = mutableSetOf<Pair<Pair<Int, Int>, Pair<Int, Int>>>()
+        val stepsSeen = mutableSetOf<Pair<Position, Direction>>()
 
         while (currentSteps.isNotEmpty()) {
             stepsSeen.addAll(currentSteps)
 
-            val nextSteps = mutableListOf<Pair<Pair<Int, Int>, Pair<Int, Int>>>()
+            val nextSteps = mutableListOf<Pair<Position, Direction>>()
             for ((tilePosition, lastDirection) in currentSteps) {
                 val nextDirections = nextDirections(this[tilePosition.second][tilePosition.first], lastDirection)
 
@@ -66,32 +69,33 @@ fun main() {
         return stepsSeen
     }
 
-    fun Set<Pair<Pair<Int, Int>, Pair<Int, Int>>>.calculateEnergizeValue() = this.map { it.first }.toSet().size
+    fun Set<Pair<Position, Direction>>.calculateEnergizeValue() = this.map { it.first }.toSet().size
 
     fun part1(input: List<String>): Int {
         val grid = input.map { it.toList() }
 
-        val stepsSeen = grid.traverseGrid(0 to 0, right)
+        val stepsSeen = grid.traverseBeam(0 to 0, right)
         return stepsSeen.calculateEnergizeValue()
     }
 
     fun part2(input: List<String>): Int {
         val grid = input.map { it.toList() }
 
-        var maxEnergized = 0
+        var maxEnergizedValue = 0
 
         for (i in grid.indices) {
-            maxEnergized = max(maxEnergized, grid.traverseGrid(0 to i, right).calculateEnergizeValue())
-            maxEnergized =
-                max(maxEnergized, grid.traverseGrid(grid.first().size - 1 to i, left).calculateEnergizeValue())
+            maxEnergizedValue = max(maxEnergizedValue, grid.traverseBeam(0 to i, right).calculateEnergizeValue())
+            maxEnergizedValue =
+                max(maxEnergizedValue, grid.traverseBeam(grid.first().size - 1 to i, left).calculateEnergizeValue())
         }
 
         for (i in grid.first().indices) {
-            maxEnergized = max(maxEnergized, grid.traverseGrid(i to 0, down).calculateEnergizeValue())
-            maxEnergized = max(maxEnergized, grid.traverseGrid(i to grid.size - 1, up).calculateEnergizeValue())
+            maxEnergizedValue = max(maxEnergizedValue, grid.traverseBeam(i to 0, down).calculateEnergizeValue())
+            maxEnergizedValue =
+                max(maxEnergizedValue, grid.traverseBeam(i to grid.size - 1, up).calculateEnergizeValue())
         }
 
-        return maxEnergized
+        return maxEnergizedValue
     }
 
     val testInput = readInput("day16/TestInput")
