@@ -1,3 +1,7 @@
+package day15
+
+import readInput
+
 fun main() {
     fun String.toHash(): Int {
         return this.fold(0) { acc, c ->
@@ -32,8 +36,8 @@ fun main() {
         }.sum()
     }
 
-    val testInput = readInput("Day15Test")
-    val input = readInput("Day15")
+    val testInput = readInput("day15/TestInput")
+    val input = readInput("day15/PuzzleInput")
 
     println("Advent of Code 2023 - Day 15")
     println("----------------------------")

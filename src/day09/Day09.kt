@@ -1,3 +1,7 @@
+package day09
+
+import readInput
+
 fun main() {
     fun parseInput(input: List<String>): List<List<Int>> {
         return input.map { line ->
@@ -33,8 +37,8 @@ fun main() {
         }
     }
 
-    val testInput = readInput("Day09Test")
-    val input = readInput("Day09")
+    val testInput = readInput("day09/TestInput")
+    val input = readInput("day09/PuzzleInput")
 
     println("Advent of Code 2023 - Day 09")
     println("----------------------------")

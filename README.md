@@ -1,7 +1,7 @@
 # Advent Of Code 2023
 
-![Days completed](https://img.shields.io/badge/Days%20Completed-15-green)
-![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-30-yellow)
+![Days completed](https://img.shields.io/badge/Days%20Completed-16-green)
+![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-32-yellow)
 ![Stars obtained](https://img.shields.io/badge/Help%20Needed%20➕-1-purple)
 ![Stars obtained](https://img.shields.io/badge/Not%20Solved%20❌-0-red)
 
@@ -9,23 +9,24 @@ These are my solution to the Advent of Code[^aoc] puzzles of 2023.
 
 ### Daily Solution Index
 
-| Day | Title                                    | Part 1 | Part 2 | Code                                                                                            |
-|-----|------------------------------------------|:------:|:------:|-------------------------------------------------------------------------------------------------|
-| 01  | [Trebuchet?!][day01]                     |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/Day01.kt) |
-| 02  | [Cube Conundrum][day02]                  |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/Day02.kt) |
-| 03  | [Gear Ratios][day03]                     |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/Day03.kt) |
-| 04  | [Scratchcards][day04]                    |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/Day04.kt) |
-| 05  | [If You Give A Seed A Fertilizer][day05] |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/Day05.kt) |
-| 06  | [Wait For It][day06]                     |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/Day06.kt) |
-| 07  | [Camel Cards][day07]                     |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/Day07.kt) |
-| 08  | [Haunted Wasteland][day08]               |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/Day08.kt) |
-| 09  | [Mirage Maintenance][day09]              |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/Day09.kt) |
-| 10  | [Pipe Maze][day10]                       |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/Day10.kt) |
-| 11  | [Cosmic Expansion][day11]                |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/Day11.kt) |
-| 12  | [Hot Springs][day12]                     |   ⭐    |   ➕    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/Day12.kt) |
-| 13  | [Point of Incidence][day13]              |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/Day13.kt) |
-| 14  | [Parabolic Reflector Dish][day14]        |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/Day14.kt) |
-| 15  | [Lens Library][day15]                    |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/Day15.kt) |
+| Day | Title                                    | Part 1 | Part 2 | Code                                                                                                  |
+|-----|------------------------------------------|:------:|:------:|-------------------------------------------------------------------------------------------------------|
+| 01  | [Trebuchet?!][day01]                     |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/day01/Day01.kt) |
+| 02  | [Cube Conundrum][day02]                  |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/day02/Day02.kt) |
+| 03  | [Gear Ratios][day03]                     |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/day03/Day03.kt) |
+| 04  | [Scratchcards][day04]                    |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/day04/Day04.kt) |
+| 05  | [If You Give A Seed A Fertilizer][day05] |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/day05/Day05.kt) |
+| 06  | [Wait For It][day06]                     |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/day06/Day06.kt) |
+| 07  | [Camel Cards][day07]                     |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/day07/Day07.kt) |
+| 08  | [Haunted Wasteland][day08]               |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/day08/Day08.kt) |
+| 09  | [Mirage Maintenance][day09]              |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/day09/Day09.kt) |
+| 10  | [Pipe Maze][day10]                       |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/day10/Day10.kt) |
+| 11  | [Cosmic Expansion][day11]                |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/day11/Day11.kt) |
+| 12  | [Hot Springs][day12]                     |   ⭐    |   ➕    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/day12/Day12.kt) |
+| 13  | [Point of Incidence][day13]              |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/day13/Day13.kt) |
+| 14  | [Parabolic Reflector Dish][day14]        |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/day14/Day14.kt) |
+| 15  | [Lens Library][day15]                    |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/day15/Day15.kt) |
+| 16  | [The Floor Will Be Lava][day16]          |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/day16/Day16.kt) |
 
 ## Templates
 
@@ -65,3 +66,4 @@ This readme uses the [readme][aoc-readme-template] of pgebert as template.
 [day13]: https://adventofcode.com/2023/day/13
 [day14]: https://adventofcode.com/2023/day/14
 [day15]: https://adventofcode.com/2023/day/15
+[day16]: https://adventofcode.com/2023/day/16

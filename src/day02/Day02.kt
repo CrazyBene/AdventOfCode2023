@@ -1,3 +1,7 @@
+package day02
+
+import readInput
+
 fun main() {
     data class Round(val numberOfReds: Int, val numberOfGreens: Int, val numberOfBlues: Int)
 
@@ -45,8 +49,8 @@ fun main() {
         }
     }
 
-    val testInput = readInput("Day02Test")
-    val input = readInput("Day02")
+    val testInput = readInput("day02/TestInput")
+    val input = readInput("day02/PuzzleInput")
 
     println("Advent of Code 2023 - Day 02")
     println("----------------------------")

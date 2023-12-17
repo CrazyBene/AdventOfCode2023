@@ -1,3 +1,7 @@
+package day03
+
+import readInput
+
 fun main() {
     data class Position(val x: Int, val y: Int)
 
@@ -81,8 +85,8 @@ fun main() {
         }.sum()
     }
 
-    val testInput = readInput("Day03Test")
-    val input = readInput("Day03")
+    val testInput = readInput("day03/TestInput")
+    val input = readInput("day03/PuzzleInput")
 
     println("Advent of Code 2023 - Day 03")
     println("----------------------------")

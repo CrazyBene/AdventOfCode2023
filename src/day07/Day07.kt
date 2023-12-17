@@ -1,3 +1,7 @@
+package day07
+
+import readInput
+
 enum class Type(val value: Int) {
     FIVE_OF_A_KIND(6),
     FOUR_OF_A_KIND(5),
@@ -157,8 +161,8 @@ fun main() {
         return calculateScore(sortedPlays)
     }
 
-    val testInput = readInput("Day07Test")
-    val input = readInput("Day07")
+    val testInput = readInput("day07/TestInput")
+    val input = readInput("day07/PuzzleInput")
 
     println("Advent of Code 2023 - Day 07")
     println("----------------------------")

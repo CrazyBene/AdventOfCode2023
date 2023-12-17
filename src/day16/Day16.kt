@@ -1,3 +1,6 @@
+package day16
+
+import readInput
 import kotlin.math.max
 
 fun main() {
@@ -33,13 +36,12 @@ fun main() {
         }
     }
 
-    fun traverseGrid(
-        grid: List<List<Char>>,
+    fun List<List<Char>>.traverseGrid(
         startPosition: Pair<Int, Int>,
         startDirection: Pair<Int, Int>
     ): Set<Pair<Pair<Int, Int>, Pair<Int, Int>>> {
-        val xRange = 0..<grid.first().size
-        val yRange = grid.indices
+        val xRange = 0..<this.first().size
+        val yRange = this.indices
 
         var currentSteps = mutableListOf(startPosition to startDirection)
         val stepsSeen = mutableSetOf<Pair<Pair<Int, Int>, Pair<Int, Int>>>()
@@ -49,7 +51,7 @@ fun main() {
 
             val nextSteps = mutableListOf<Pair<Pair<Int, Int>, Pair<Int, Int>>>()
             for ((tilePosition, lastDirection) in currentSteps) {
-                val nextDirections = nextDirections(grid[tilePosition.second][tilePosition.first], lastDirection)
+                val nextDirections = nextDirections(this[tilePosition.second][tilePosition.first], lastDirection)
 
                 for (nextDirection in nextDirections) {
                     val nextPosition = tilePosition + nextDirection
@@ -64,11 +66,13 @@ fun main() {
         return stepsSeen
     }
 
+    fun Set<Pair<Pair<Int, Int>, Pair<Int, Int>>>.calculateEnergizeValue() = this.map { it.first }.toSet().size
+
     fun part1(input: List<String>): Int {
         val grid = input.map { it.toList() }
 
-        val stepsSeen = traverseGrid(grid, 0 to 0, right)
-        return stepsSeen.map { it.first }.toSet().size
+        val stepsSeen = grid.traverseGrid(0 to 0, right)
+        return stepsSeen.calculateEnergizeValue()
     }
 
     fun part2(input: List<String>): Int {
@@ -77,21 +81,21 @@ fun main() {
         var maxEnergized = 0
 
         for (i in grid.indices) {
-            maxEnergized = max(maxEnergized, traverseGrid(grid, 0 to i, right).map { it.first }.toSet().size)
+            maxEnergized = max(maxEnergized, grid.traverseGrid(0 to i, right).calculateEnergizeValue())
             maxEnergized =
-                max(maxEnergized, traverseGrid(grid, grid.first().size - 1 to i, left).map { it.first }.toSet().size)
+                max(maxEnergized, grid.traverseGrid(grid.first().size - 1 to i, left).calculateEnergizeValue())
         }
 
         for (i in grid.first().indices) {
-            maxEnergized = max(maxEnergized, traverseGrid(grid, i to 0, down).map { it.first }.toSet().size)
-            maxEnergized = max(maxEnergized, traverseGrid(grid, i to grid.size - 1, up).map { it.first }.toSet().size)
+            maxEnergized = max(maxEnergized, grid.traverseGrid(i to 0, down).calculateEnergizeValue())
+            maxEnergized = max(maxEnergized, grid.traverseGrid(i to grid.size - 1, up).calculateEnergizeValue())
         }
 
         return maxEnergized
     }
 
-    val testInput = readInput("Day16Test")
-    val input = readInput("Day16")
+    val testInput = readInput("day16/TestInput")
+    val input = readInput("day16/PuzzleInput")
 
     println("Advent of Code 2023 - Day 16")
     println("----------------------------")

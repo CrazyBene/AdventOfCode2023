@@ -1,3 +1,6 @@
+package day04
+
+import readInput
 import kotlin.math.min
 import kotlin.math.pow
 
@@ -43,8 +46,8 @@ fun main() {
         return numberOfCards.sum()
     }
 
-    val testInput = readInput("Day04Test")
-    val input = readInput("Day04")
+    val testInput = readInput("day04/TestInput")
+    val input = readInput("day04/PuzzleInput")
 
     println("Advent of Code 2023 - Day 04")
     println("----------------------------")

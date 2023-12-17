@@ -1,3 +1,6 @@
+package day06
+
+import readInput
 import kotlin.math.ceil
 import kotlin.math.floor
 import kotlin.math.pow
@@ -41,8 +44,8 @@ fun main() {
         return calculateAmountOfWaysToWin(race)
     }
 
-    val testInput = readInput("Day06Test")
-    val input = readInput("Day06")
+    val testInput = readInput("day06/TestInput")
+    val input = readInput("day06/PuzzleInput")
 
     println("Advent of Code 2023 - Day 06")
     println("----------------------------")

@@ -1,3 +1,7 @@
+package day10
+
+import readInput
+
 data class Position(val x: Int, val y: Int) {
 
     operator fun plus(other: Position): Position {
@@ -168,9 +172,9 @@ fun main() {
         return tilesInside
     }
 
-    val testInputPart1 = readInput("Day10Part1Test")
-    val testInputPart2 = readInput("Day10Part2Test")
-    val input = readInput("Day10")
+    val testInputPart1 = readInput("day10/TestInputPart1")
+    val testInputPart2 = readInput("day10/TestInputPart2")
+    val input = readInput("day10/PuzzleInput")
 
     println("Advent of Code 2023 - Day 10")
     println("----------------------------")

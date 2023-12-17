@@ -1,3 +1,7 @@
+package day11
+
+import readInput
+import transpose
 import kotlin.math.abs
 
 fun List<List<Char>>.findAllChars(char: Char): List<Pair<Int, Int>> {
@@ -71,8 +75,8 @@ fun main() {
         return distances.sum() / 2
     }
 
-    val testInput = readInput("Day11Test")
-    val input = readInput("Day11")
+    val testInput = readInput("day11/TestInput")
+    val input = readInput("day11/PuzzleInput")
 
     println("Advent of Code 2023 - Day 11")
     println("----------------------------")

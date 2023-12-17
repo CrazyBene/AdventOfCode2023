@@ -1,3 +1,8 @@
+package day13
+
+import readInput
+import transpose
+
 fun main() {
     fun List<String>.transpose() = this.map { it.toList() }.transpose().map { it.joinToString("") }
 
@@ -68,8 +73,8 @@ fun main() {
         }
     }
 
-    val testInput = readInput("Day13Test")
-    val input = readInput("Day13")
+    val testInput = readInput("day13/TestInput")
+    val input = readInput("day13/PuzzleInput")
 
     println("Advent of Code 2023 - Day 13")
     println("----------------------------")

@@ -1,7 +1,8 @@
-// I could not solve part 2 of the puzzle on my own
+package day12// I could not solve part 2 of the puzzle on my own
 // I looked at the solution in this video https://www.youtube.com/watch?v=g3Ms5e7Jdqo
 // and adapted it to kotlin
 
+import readInput
 import kotlin.math.min
 
 fun main() {
@@ -61,8 +62,8 @@ fun main() {
         }
     }
 
-    val testInput = readInput("Day12Test")
-    val input = readInput("Day12")
+    val testInput = readInput("day12/TestInput")
+    val input = readInput("day12/PuzzleInput")
 
     println("Advent of Code 2023 - Day 12")
     println("----------------------------")

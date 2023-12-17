@@ -1,3 +1,7 @@
+package day01
+
+import readInput
+
 fun main() {
     fun getCalibrationValue(line: String): Int {
         val firstDigit = line.first { it.isDigit() }
@@ -23,9 +27,9 @@ fun main() {
         }
     }
 
-    val testInputPart1 = readInput("Day01Part1Test")
-    val testInputPart2 = readInput("Day01Part2Test")
-    val input = readInput("Day01")
+    val testInputPart1 = readInput("day01/TestInputPart1")
+    val testInputPart2 = readInput("day01/TestInputPart2")
+    val input = readInput("day01/PuzzleInput")
 
     println("Advent of Code 2023 - Day 01")
     println("----------------------------")

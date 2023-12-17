@@ -1,3 +1,7 @@
+package day08
+
+import readInput
+
 fun main() {
     data class Node(val name: String, val nameNodeLeft: String, val nameNodeRight: String)
 
@@ -66,9 +70,9 @@ fun main() {
         return stepList.reduce { acc, l -> findLCM(acc, l) }
     }
 
-    val testInputPart1 = readInput("Day08Part1Test")
-    val testInputPart2 = readInput("Day08Part2Test")
-    val input = readInput("Day08")
+    val testInputPart1 = readInput("day08/TestInputPart1")
+    val testInputPart2 = readInput("day08/TestInputPart2")
+    val input = readInput("day08/PuzzleInput")
 
     println("Advent of Code 2023 - Day 08")
     println("----------------------------")

@@ -1,7 +1,10 @@
+package day05
+
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.runBlocking
+import readInput
 import kotlin.math.min
 
 fun main() {
@@ -89,8 +92,8 @@ fun main() {
         }
     }
 
-    val testInput = readInput("Day05Test")
-    val input = readInput("Day05")
+    val testInput = readInput("day05/TestInput")
+    val input = readInput("day05/PuzzleInput")
 
     println("Advent of Code 2023 - Day 05")
     println("----------------------------")
