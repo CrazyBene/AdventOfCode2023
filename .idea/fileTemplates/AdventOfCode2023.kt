@@ -11,8 +11,8 @@ fun main() {
         return input.size
     }
 
-    val testInput = readInput("Day${AdventDay}Test")
-    val input = readInput("Day${AdventDay}")
+    val testInput = readInput("day${AdventDay}/TestInput")
+    val input = readInput("day${AdventDay}/PuzzleInput")
 
     println("Advent of Code 2023 - Day $AdventDay")
     println("----------------------------")
