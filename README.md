@@ -1,8 +1,8 @@
 # Advent Of Code 2023
 
-![Days completed](https://img.shields.io/badge/Days%20Completed-17-green)
-![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-34-yellow)
-![Stars obtained](https://img.shields.io/badge/Help%20Needed%20➕-2-purple)
+![Days completed](https://img.shields.io/badge/Days%20Completed-18-green)
+![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-36-yellow)
+![Stars obtained](https://img.shields.io/badge/Help%20Needed%20➕-1-purple)
 ![Stars obtained](https://img.shields.io/badge/Not%20Solved%20❌-0-red)
 
 These are my solution to the Advent of Code[^aoc] puzzles of 2023.
@@ -28,6 +28,7 @@ These are my solution to the Advent of Code[^aoc] puzzles of 2023.
 | 15  | [Lens Library][day15]                    |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/day15/Day15.kt) |
 | 16  | [The Floor Will Be Lava][day16]          |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/day16/Day16.kt) |
 | 17  | [Clumsy Crucible][day17]                 |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/day17/Day17.kt) |
+| 18  | [Lavaduct Lagoon][day18]                 |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/day18/Day18.kt) |
 
 ## Templates
 
@@ -69,3 +70,4 @@ This readme uses the [readme][aoc-readme-template] of pgebert as template.
 [day15]: https://adventofcode.com/2023/day/15
 [day16]: https://adventofcode.com/2023/day/16
 [day17]: https://adventofcode.com/2023/day/17
+[day18]: https://adventofcode.com/2023/day/18
