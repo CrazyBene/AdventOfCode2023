@@ -1,6 +1,9 @@
 #set($FileName = ${NAME}) 
 #set($AdventDay = $FileName.substring(3))
 #set($AdventDayLength = $AdventDay.length())
+package day$AdventDay
+
+import readInput
 
 fun main() {
     fun part1(input: List<String>): Int {
