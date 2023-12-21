@@ -1,8 +1,8 @@
 # Advent Of Code 2023
 
-![Days completed](https://img.shields.io/badge/Days%20Completed-19-green)
-![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-38-yellow)
-![Stars obtained](https://img.shields.io/badge/Help%20Needed%20➕-1-purple)
+![Days completed](https://img.shields.io/badge/Days%20Completed-20-green)
+![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-40-yellow)
+![Stars obtained](https://img.shields.io/badge/Help%20Needed%20➕-2-purple)
 ![Stars obtained](https://img.shields.io/badge/Not%20Solved%20❌-0-red)
 
 These are my solution to the Advent of Code[^aoc] puzzles of 2023.
@@ -30,6 +30,7 @@ These are my solution to the Advent of Code[^aoc] puzzles of 2023.
 | 17  | [Clumsy Crucible][day17]                 |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/day17/Day17.kt) |
 | 18  | [Lavaduct Lagoon][day18]                 |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/day18/Day18.kt) |
 | 19  | [Aplenty][day19]                         |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/day19/Day19.kt) |
+| 20  | [Pulse Propagation][day20]               |   ⭐    |   ➕    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/day20/Day20.kt) |
 
 ## Templates
 
@@ -40,16 +41,18 @@ is a ready-to-use template for advent of code written in kotlin - just use it an
 
 ### Daily Template
 
-This project has a daily file template for Intellij, just create a new Day with the AdventOfCode2023 file template and calling the file DayXX.
+This project has a daily file template for Intellij, just create a new Day with the AdventOfCode2023 file template and
+calling the file DayXX.
 
 ### Readme Template
 
 This readme uses the [readme][aoc-readme-template] of pgebert as template.
 
 [^aoc]:
-    [Advent of Code][aoc] – An annual event of Christmas-oriented programming challenges started December 2015.
-    Every year since then, beginning on the first day of December, a programming puzzle is published every day for twenty-five days.
-    You can solve the puzzle and provide an answer using the language of your choice.
+[Advent of Code][aoc] – An annual event of Christmas-oriented programming challenges started December 2015.
+Every year since then, beginning on the first day of December, a programming puzzle is published every day for
+twenty-five days.
+You can solve the puzzle and provide an answer using the language of your choice.
 
 [aoc]: https://adventofcode.com
 [aoc-kotlin-template]: https://github.com/kotlin-hands-on/advent-of-code-kotlin-template
@@ -73,3 +76,4 @@ This readme uses the [readme][aoc-readme-template] of pgebert as template.
 [day17]: https://adventofcode.com/2023/day/17
 [day18]: https://adventofcode.com/2023/day/18
 [day19]: https://adventofcode.com/2023/day/19
+[day20]: https://adventofcode.com/2023/day/20
