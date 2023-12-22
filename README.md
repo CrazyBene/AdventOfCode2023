@@ -1,8 +1,8 @@
 # Advent Of Code 2023
 
-![Days completed](https://img.shields.io/badge/Days%20Completed-20-green)
-![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-40-yellow)
-![Stars obtained](https://img.shields.io/badge/Help%20Needed%20➕-2-purple)
+![Days completed](https://img.shields.io/badge/Days%20Completed-21-green)
+![Stars obtained](https://img.shields.io/badge/Stars%20Obtained%20⭐-42-yellow)
+![Stars obtained](https://img.shields.io/badge/Help%20Needed%20➕-3-purple)
 ![Stars obtained](https://img.shields.io/badge/Not%20Solved%20❌-0-red)
 
 These are my solution to the Advent of Code[^aoc] puzzles of 2023.
@@ -31,6 +31,7 @@ These are my solution to the Advent of Code[^aoc] puzzles of 2023.
 | 18  | [Lavaduct Lagoon][day18]                 |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/day18/Day18.kt) |
 | 19  | [Aplenty][day19]                         |   ⭐    |   ⭐    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/day19/Day19.kt) |
 | 20  | [Pulse Propagation][day20]               |   ⭐    |   ➕    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/day20/Day20.kt) |
+| 21  | [Step Counter][day20]                    |   ⭐    |   ➕    | [![Code](https://img.shields.io/badge/Code-grey?style=for-the-badge&logo=Kotlin)](src/day21/Day21.kt) |
 
 ## Templates
 
@@ -77,3 +78,4 @@ You can solve the puzzle and provide an answer using the language of your choice
 [day18]: https://adventofcode.com/2023/day/18
 [day19]: https://adventofcode.com/2023/day/19
 [day20]: https://adventofcode.com/2023/day/20
+[day21]: https://adventofcode.com/2023/day/21
